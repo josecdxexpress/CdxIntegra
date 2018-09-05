@@ -1,0 +1,100 @@
+<mat-card>
+    <mat-card color="red">
+            <div class="md-toolbar-tools">
+                <h3>Requisições</h3>
+                <span flex></span>     
+                <form materialize class="col s12" (ngSubmit)="onPesquisar()">
+        <div layout="row">
+                <mat-form-field>
+                    <input matInput #myInput name="srcNumero" [(ngModel)]="srcNumero" placeholder="Número Nota">
+                </mat-form-field>
+                  &nbsp; &nbsp;
+                  <mat-form-field>
+                      <input matInput #myInput name="srcReferencia" [(ngModel)]="srcReferencia" placeholder="Referência">
+                  </mat-form-field>
+                  &nbsp; &nbsp;
+                  <button mat-stroked-button>Pesquisar</button>
+                  &nbsp; &nbsp;
+                </div>
+              </form>
+            </div>
+    </mat-card>
+            <div class="example-container mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+            <!-- <ng-container matColumnDef="Codigo">
+                <th mat-header-cell *matHeaderCellDef> Codigo </th>
+                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container> -->
+
+            <ng-container matColumnDef="Referencia">
+                <th mat-header-cell *matHeaderCellDef> Referencia </th>
+                <td mat-cell *matCellDef="let element"> {{element.referencia}} </td>
+            </ng-container>
+
+            <!-- <ng-container matColumnDef="Servico">
+                <th mat-header-cell *matHeaderCellDef> Serviço </th>
+                <td mat-cell *matCellDef="let element"> {{element.dscServicoWsSoap}} </td>
+            </ng-container> -->
+
+            <ng-container matColumnDef="Nota">
+                <th mat-header-cell *matHeaderCellDef> Nota </th>
+                <td mat-cell *matCellDef="let element"> {{element.numeroNotaFiscal}} </td>
+            </ng-container>
+
+
+            <!-- <ng-container matColumnDef="Prestador">
+                <th mat-header-cell *matHeaderCellDef> Prestador </th>
+                <td mat-cell *matCellDef="let element"> {{element.dscPrestador}} </td>
+            </ng-container> -->
+
+            <ng-container matColumnDef="Valor">
+                <th mat-header-cell *matHeaderCellDef> Valor da Nota </th>
+                <td mat-cell *matCellDef="let element"> {{element.valorNota}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Cidade">
+                <th mat-header-cell *matHeaderCellDef> Cidade </th>
+                <td mat-cell *matCellDef="let element"> {{element.dscCidade}} </td>
+            </ng-container>
+
+                        <ng-container matColumnDef="Operacao">
+                <th mat-header-cell *matHeaderCellDef> Tipo Operação </th>
+                <td mat-cell *matCellDef="let element"> {{element.dscTipoOperacao}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Etapa">
+                <th mat-header-cell *matHeaderCellDef> Etapa </th>
+                <td mat-cell *matCellDef="let element"> {{element.dscEtapa}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Tempo">
+                <th mat-header-cell *matHeaderCellDef> Tempo (s) </th>
+                <td mat-cell *matCellDef="let element"> {{element.tempoExecucao}} </td>
+            </ng-container>
+
+            <!-- <ng-container matColumnDef="Status">
+                <th mat-header-cell *matHeaderCellDef> Status </th>
+                <td mat-cell *matCellDef="let element"> {{element.dscStatus}} </td>
+            </ng-container> -->
+
+            <!-- <ng-container matColumnDef="Erro">
+                <th mat-header-cell *matHeaderCellDef> Erro </th>
+                <td mat-cell *matCellDef="let element"> {{element.erro}} </td>
+            </ng-container> -->
+
+            <ng-container matColumnDef="Observacao">
+                <th mat-header-cell *matHeaderCellDef> Observação </th>
+                <td mat-cell *matCellDef="let element"> {{element.observacao}} </td>
+            </ng-container>
+
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>   
+        </table>     
+        <mat-paginator [length]="totalCount"
+        [pageSize]="paginationService.pageSize"
+        [pageSizeOptions]="paginationService.selectItemsPerPage" 
+        (page)="onPageSwitch.emit($event)">
+      </mat-paginator>
+        </div>
+</mat-card>

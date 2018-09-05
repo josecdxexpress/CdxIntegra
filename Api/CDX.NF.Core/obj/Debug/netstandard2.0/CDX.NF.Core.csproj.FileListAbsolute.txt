@@ -1,0 +1,17 @@
+C:\Cdx\CDX.NF.Core\bin\Debug\netstandard2.0\CDX.NF.Core.deps.json
+C:\Cdx\CDX.NF.Core\bin\Debug\netstandard2.0\CDX.NF.Core.dll
+C:\Cdx\CDX.NF.Core\bin\Debug\netstandard2.0\CDX.NF.Core.pdb
+C:\Cdx\CDX.NF.Core\obj\Debug\netstandard2.0\CDX.NF.Core.csprojResolveAssemblyReference.cache
+C:\Cdx\CDX.NF.Core\obj\Debug\netstandard2.0\CDX.NF.Core.csproj.CoreCompileInputs.cache
+C:\Cdx\CDX.NF.Core\obj\Debug\netstandard2.0\CDX.NF.Core.AssemblyInfoInputs.cache
+C:\Cdx\CDX.NF.Core\obj\Debug\netstandard2.0\CDX.NF.Core.AssemblyInfo.cs
+C:\Cdx\CDX.NF.Core\obj\Debug\netstandard2.0\CDX.NF.Core.dll
+C:\Cdx\CDX.NF.Core\obj\Debug\netstandard2.0\CDX.NF.Core.pdb
+D:\Cdx\CDX.NF.Core\bin\Debug\netstandard2.0\CDX.NF.Core.deps.json
+D:\Cdx\CDX.NF.Core\bin\Debug\netstandard2.0\CDX.NF.Core.dll
+D:\Cdx\CDX.NF.Core\bin\Debug\netstandard2.0\CDX.NF.Core.pdb
+D:\Cdx\CDX.NF.Core\obj\Debug\netstandard2.0\CDX.NF.Core.csproj.CoreCompileInputs.cache
+D:\Cdx\CDX.NF.Core\obj\Debug\netstandard2.0\CDX.NF.Core.AssemblyInfoInputs.cache
+D:\Cdx\CDX.NF.Core\obj\Debug\netstandard2.0\CDX.NF.Core.AssemblyInfo.cs
+D:\Cdx\CDX.NF.Core\obj\Debug\netstandard2.0\CDX.NF.Core.dll
+D:\Cdx\CDX.NF.Core\obj\Debug\netstandard2.0\CDX.NF.Core.pdb

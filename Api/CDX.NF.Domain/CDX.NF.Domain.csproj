@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\Config\**" />
+    <Compile Remove="Models\Mapping\**" />
+    <Compile Remove="Services\BizServices\**" />
+    <Compile Remove="Services\EntityServices\**" />
+    <EmbeddedResource Remove="Models\Config\**" />
+    <EmbeddedResource Remove="Models\Mapping\**" />
+    <EmbeddedResource Remove="Services\BizServices\**" />
+    <EmbeddedResource Remove="Services\EntityServices\**" />
+    <None Remove="Models\Config\**" />
+    <None Remove="Models\Mapping\**" />
+    <None Remove="Services\BizServices\**" />
+    <None Remove="Services\EntityServices\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\To\PedidoAutorizacaoRetornoTo.cs" />
+    <Compile Remove="Models\To\PesquisaTo.cs" />
+    <Compile Remove="Services\IXDbxService.cs" />
+    <Compile Remove="Services\Livro.cs" />
+    <Compile Remove="Services\XDbxService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.1" />
+    <PackageReference Include="System.ServiceModel.Duplex" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.Security" Version="4.4.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CDX.NF.Core\CDX.NF.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+
+</Project>

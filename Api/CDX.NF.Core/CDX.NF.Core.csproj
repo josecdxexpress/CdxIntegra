@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Infraestrutura\Api\NovaPasta\**" />
+    <EmbeddedResource Remove="Infraestrutura\Api\NovaPasta\**" />
+    <None Remove="Infraestrutura\Api\NovaPasta\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Infraestrutura\Api\FiltroValidacao.cs" />
+    <Compile Remove="Infraestrutura\Api\UsuarioFiltroDto.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Infraestrutura\Services\CdxEntityService.cs~RF1d98ee75.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.ComponentModel.Annotations">
+      <HintPath>..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.netcore.app\2.0.0\ref\netcoreapp2.0\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.1" />
+  </ItemGroup>
+
+</Project>

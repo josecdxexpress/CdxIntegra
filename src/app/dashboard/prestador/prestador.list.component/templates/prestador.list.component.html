@@ -1,0 +1,66 @@
+<mat-card>
+    <mat-card>
+            <div class="md-toolbar-tools">
+                <h3>Usuários</h3>
+                <span flex></span>     
+                <form materialize class="col s12" (ngSubmit)="onPesquisar()">
+                <div layout="row">
+                        <mat-form-field>
+                            <input matInput #myInput name="srcNome" [(ngModel)]="srcNome" placeholder="Nome">
+                        </mat-form-field>
+                          &nbsp; &nbsp;
+                          <mat-form-field>
+                              <input matInput #myInput name="srcLogin" [(ngModel)]="srcLogin" placeholder="Login">
+                          </mat-form-field>
+                          &nbsp; &nbsp;
+                          <button mat-stroked-button>Pesquisar</button>
+                          &nbsp; &nbsp;
+                          <button mat-stroked-button [routerLink]="['novo']">Novo</button>
+                        </div>
+                      </form>
+                    </div>
+            </mat-card>
+                    <div class="example-container mat-elevation-z8">
+                <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+                    <ng-container matColumnDef="Codigo">
+                        <th mat-header-cell *matHeaderCellDef> Codigo </th>
+                        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="Nome">
+                        <th mat-header-cell *matHeaderCellDef> Nome </th>
+                        <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="Login">
+                        <th mat-header-cell *matHeaderCellDef> Login </th>
+                        <td mat-cell *matCellDef="let element"> {{element.login}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="Email">
+                        <th mat-header-cell *matHeaderCellDef> Email </th>
+                        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="Situacao">
+                        <th mat-header-cell *matHeaderCellDef> Situacao </th>
+                        <td mat-cell *matCellDef="let element"> {{element.situacao}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="actionsColumn">
+                        <th mat-header-cell *matHeaderCellDef>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Ações</th>
+                        <td mat-cell *matCellDef="let element">
+                                <button mat-icon-button (click)="onDeleteCustomer.emit(element)"><mat-icon>delete</mat-icon></button> 
+                                <a mat-icon-button [routerLink]="['editar', element.id]"><mat-icon>edit</mat-icon></a>
+                        </td>                      
+                    </ng-container>
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>   
+                </table>
+               <mat-paginator [length]="totalCount"
+                [pageSize]="paginationService.pageSize"
+                [pageSizeOptions]="paginationService.selectItemsPerPage" 
+                (page)="onPageSwitch.emit($event)">
+              </mat-paginator>
+                </div>
+        </mat-card>
